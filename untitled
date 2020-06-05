@@ -1,0 +1,31 @@
+Qua tham khảo thấy rằng: 
+ + Mọi field trong cái bảng cổ phiếu đều có giá trị cả: 
+     . Cổ phiếu bán hot: khối lượng bán
+     . cổ phiếu hot gom vào, mua vào : khối lượng mua
+     . nhà đầu tư nước ngoài biến động lớn: dùng
+     . tính thanh khoản đo đạt bằng khối lượng cả thì phải
+     .... Nói chung tất cả đều cần
+
+Ý tưởng: 
+ + Viết 1 lớp stock đọc tất cả dữ liệu các mã vào-> yên tâm máy tính k phải con người đâu mà đọc nhiều xử lý nhiều :))
+ + 1 lớp stockIndex :> VN index, Upcome index, HNX index nó tham chiếu đến các cổ thiếu thuộc nó(HashMap: String stockCode -> Đối tượng đấy)
+ => xong việc đọc ghi các dữ liệu đầu vào=> sử dụng
+ + Các mẫu câu có thể viết 1 lớp cũng được nếu muốn phân loại: có field thuộc nhóm nào
+ vd : quy định 	1: nhóm tăng giảm
+ 				2: thanh khoản
+ 				3. nhà đầu tư nước ngoài
+ 				4. cổ phiếu hot...liên quan khối lượng giao dịch mua bán...
+ 	=> mỗi lần thêm 1 câu mới trong text câu ta chỉ cần xem taggs hay xem nó chứa các tags gì để phân loại vào đấy thôi.
+  => how to use? Không cần viết lớp : mỗi lần sinh ra sẽ ra các câu khác nhau
+  Mỗi câu sẽ có nhiều ít tham số-> có tham số nào thì thay vào, k có thì thôi.
+  Nhưng do ta chọn câu rồi đa số số tham số giống nhau(chênh lệch 1 không đáng kể)
+  + có thể viết thêm 1 lớp để xử lý xem các nào nó lạ quá so với quá khứ(ngày hôm trước ... không cần cũng được) => Mục đích sinh ra câu khái quát về sàn index, nhóm bluechips, penny, ... 
+  + Vấn đề về cho các câu minh bạch, đúng thứ tự thì chắc dùng ưu tiên đi. thằng nào thuốc nhóm ưu tiên cao lên trước(Mở đầu)
+  => Mình sẽ k thể nào đầy đủ do vậy các editor sẽ làm cho
+  => Nếu sinh bài viết: Tên bài viết -> tags -> gắn chết và khi gõ đến sẽ đề xuất lựa chọn hơn là cho nó gõ xong tìm kiếm
+  => nếu muốn vẽ hình tổng thể của vn index, .. tìm hiểu về platplotlib gì gì đấy do nó hỗ trợ, ko biết nó có cho 2 ngôn ngữ cùng 1 lúc k
+  => Việc lập trình mô hình hoá các câu thực sự không cần thiết(Không đảm bảo tính scalability=> Mỗi lần thêm câu mới lại viết tiếp ngáo thật hâh)
+
+  => issue: Chưa biết ghi lớp thế nào và chưa biết file excel phủng thế nào
+  
+
